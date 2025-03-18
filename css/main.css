@@ -1,0 +1,212 @@
+
+/* Utility classes */
+.hidden{
+    display: none;
+}
+
+/* General Styles */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(71, 68, 68);
+    color: rgb(255, 0, 0);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Main Header */
+
+header{
+    background-color: rgb(0, 0, 0);
+    /* padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding shortcut trbl */
+    padding: 10px 0 10px 0; 
+}
+
+#main-logo{
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 4px 4px 6px 0px rgba(245, 239, 239, 0.9);
+}
+
+/* Main Character Nav */
+
+#character-nav{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url('../images/characters_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5a849e;
+    background-blend-mode: multiply;   
+}
+
+#characters{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#characters li{
+    display: inline;
+    margin: 11px;
+}
+
+#characters li img{
+    padding: 10px;
+    border: solid 1px #fff;
+    background-color: #000;
+    box-shadow: 0px 0px 10px 0px rgb( 255, 255, 255, .9);
+    transition: all .3s ease-in-out;
+}
+
+#characters li img:hover {
+    filter:saturate(140%) contrast(120%) brightness(110%);  transform: scale(1.4);
+}
+
+#characters li a{
+    text-decoration: none;
+}
+
+/* The animation code */
+@keyframes hero {
+    from {background-color: red;}
+    to {background-color: yellow;}
+} 
+  
+  /* The element to apply the animation to */
+#characters li img {
+    /* width: 100px;
+    height: 100px; */
+    background-color: rgb(225, 10, 10);
+    animation-name: hero;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+/* Instructions */
+
+#instructions{
+    padding: 20px;
+}
+
+#instructions h3{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#instructions p{
+    font-size: 18px;
+    text-align: center;
+}
+
+#instructions h3:hover{
+     color: rgb(242, 243, 240); 
+ }
+ 
+.hover-underline {
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-underline::after,
+  .hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+  }
+  
+  .hover-underline:hover::after,
+  .hover-underline:hover::before {
+    transform: scaleX(1);
+  }
+
+#main-footer{
+    color: #fff;
+    text-align: center;
+    height: 80px;
+    background-color: rgb(40, 37, 37);
+    padding: 20px 0 20px 0;
+}
+
+/* lightbox */
+
+.lightbox {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 55vh;
+    background-position: 40px bottom;
+    display: none;
+}
+
+/* turn on the lightbox using the :target pseudo selector */
+/* This rule will be dynamic, meaning .lightbox#1lightbox1 or lightbox#lightbox2 */
+
+.lightbox:target {
+    display: block;
+
+}
+
+#lightbox1 {
+    background-image: url(../images/Luffy_bg.webp);
+}
+
+.lightbox-close {
+    margin-left: 90%;
+    color: #fff;
+    font-size: 45px;
+    text-decoration: none;  
+}
+
+.lightbox article {
+    margin-left: 40%;
+    margin-right: 50px;
+    width: 600px;
+}
+
+.lb-heading {
+    font-size: 32px;
+}
+
+.lb-text {
+    line-height: 40px;
+    
+}
+
+#lightbox2 {
+    background-image: url(../images/Zoro_bg.webp);
+}
+
+#lightbox3 {
+    background-image: url(../images/sanji_bg.webp);
+}
+
+#lightbox4 {
+    background-image: url(../images/Law_bg.png);
+}
